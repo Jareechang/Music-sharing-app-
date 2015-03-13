@@ -1,11 +1,13 @@
-== README
+== Music sharing app 
+
+a music sharing app that allows users to follow their friends and be able to see songs that they are listening to. 
+
+ In addition, the user is able to hand pick songs to their playlist via the news feed showing songs that the individual they have followed are playing! 
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
-
-* Ruby version
 
 * System dependencies
 
