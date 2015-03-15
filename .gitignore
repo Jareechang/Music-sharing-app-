@@ -15,3 +15,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+#Ignore facebook env variable setup shell script 
+facebookenv.sh
