@@ -1,18 +1,19 @@
 Rails.application.routes.draw do
   # initial setup needs to be changed later
 
+  root 'static_pages#home'
+  get 'static_pages/help'
+  get 'about' => 'static_pages#about'
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
-  get 'static_pages/home'
-  get 'static_pages/help'
-  get 'about' => 'static_pages#about'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'application#hello'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
