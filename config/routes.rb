@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   # initial setup needs to be changed later
 
-  get 'auth/:provider/callback', to: 'sessions#create'
-  get 'auth/failure', to: redirect('/')
-  get 'signout', to: 'sessiosn#destroy', as: 'signout'
+  match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+  match 'auth/failure', to: redirect('/'), via: [:get, :post]
+  match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
   get 'static_pages/home'
   get 'static_pages/help'
   get 'about' => 'static_pages#about'
