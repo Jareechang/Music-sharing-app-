@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class TrackTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "should grab the most recent tracks" do 
+    assert_equal Track.first, Track(:most_recent)
+  end
 end
