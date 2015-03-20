@@ -1,6 +1,7 @@
 <!DOCTYPE html> 
 <html> 
   <head>
+ 
     <%= stylesheet_link_tag 'application', media: 'all',
                                            'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -9,6 +10,7 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
       </script>
     <![endif]-->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.5.9/perfect-scrollbar.min.js"/></script>
   </head>
 
 
@@ -34,7 +36,81 @@
     </header> 
 
     <div class="body-content">
-      <%= yield %>
+      <style> 
+        #container {
+          height:100px;
+          width:500px;
+          overflow:auto;
+        }
+      </style>
+    
+      <div id="container">
+        <ul>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+                    <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+                 <li>1</li>
+          <li>2</li>
+          <li>2</li>
+          <li>2</li>
+          <li>2</li>
+          <li>2</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+                    <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+          <li>1</li>
+        </ul>
+      </div>
+        <script>
+      $(function(){
+        $('#container').perfectScrollbar({
+          wheelSpeed: 2,
+          wheelPropagation:true,
+          minScrollbarLength: 5
+        });        
+      })
+      </script>
+     
     </div>
 
 
