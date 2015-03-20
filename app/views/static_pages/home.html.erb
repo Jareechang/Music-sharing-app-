@@ -1,4 +1,8 @@
 <div class="widget1">
   <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+    <% if current_user %> 
+      <p class="text-muted"> Welcome, <%= current_user.name %></p>
+      <img id="usr-profile-picture" src=<%= current_user.info.image %> />
+    <% end %>
 </div>
 
