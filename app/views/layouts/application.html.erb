@@ -13,32 +13,33 @@
 
 
   <body> 
-    <header class="navbar navbar-fixed-top navbar-inverse">
+    <header class="navbar navbar-fixed-top">
       <div class="container">
-        <%= link_to "sample app", "#", id: "logo" %>
+         <%= link_to "Social-Dbs", "#", id: "logo", class: "navbar-header" %>
         <nav> 
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home",   '#' %></li>
             <li><%= link_to "Help",   '#' %></li>
             <li><%= link_to "About",   '#' %></li>
+            <li> 
+              <% if current_user %>
+                Signed in as <strong><%= current_user.name %></strong>!
+                <img src=<%= current_user.info.image %> />
+                <%= link_to "Sign out", signout_path, id: "sign_out" %>
+              <% else %>
+                <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in"%>
+              <% end %>
+            </li>
           </ul>
         </nav>
       </div>
-    <header>
-    <div class="container">
-      <div id="user_nav">
-        <% if current_user %>
-          <p class="text-muted">Signed in as <strong><%= current_user.name %></strong>!</p>
-          <img src=<%= current_user.info.image %> />
-          <%= link_to "Sign out", signout_path, id: "sign_out" %>
-        <% else %>
-          <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-        <% end %>
-      </div>
-    </div>
-    <div class="container">
+    </header> 
+
+    <div class="body-content">
       <%= yield %>
     </div>
+
+
   </body>
 
 </html>

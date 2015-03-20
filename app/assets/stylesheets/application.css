@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+
+/* 
+  responsive design for navbar 
+    -top paddding for the nav elements increased 300 px
+    -text alignment to center 
+    -making logo name centered 
+ */
+
+@media  (min-width: 100px) and (max-width: 765px) {
+  .body-content {
+    padding-top: 300px;
+  }
+  nav {
+    padding-top:0;
+    text-align:center;
+  }
+  .navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+  }
+  .navbar-brand {
+    float:none;
+  }
+}
+
+#logo {
+  color: black;
+}
