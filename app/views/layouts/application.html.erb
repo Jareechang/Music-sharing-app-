@@ -54,76 +54,95 @@
           border: black 2px solid;
         }
       </style>
-    
-      <div id="container">
-        <ul>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-                    <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-                 <li>1</li>
-          <li>2</li>
-          <li>2</li>
-          <li>2</li>
-          <li>2</li>
-          <li>2</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-                    <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-        </ul>
-      </div>
-      <script>
-        $(function(){
-          $('#container').perfectScrollbar({
-            wheelSpeed:2,
-            wheelPropagation:true,
-            minScrollbarLength: 5
-          });        
-        })
-      </script>
-      <%= yield %>
-     
+     <div class="row">
+        <div class="col-md-8">
+          <div id="container">
+            <ul>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+                        <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+                     <li>1</li>
+              <li>2</li>
+              <li>2</li>
+              <li>2</li>
+              <li>2</li>
+              <li>2</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+                        <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+            </ul>
+          </div>
+
+        <script>
+          $(function(){
+            $('#container').perfectScrollbar({
+              wheelSpeed:2,
+              wheelPropagation:true,
+              minScrollbarLength: 5
+            });        
+          })
+        </script>
+        <%= yield %>
+        </div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+              Basic panel example
+              a bunch of stuff 
+                        Basic panel example
+              a bunch of stuff 
+                        Basic panel example
+              a bunch of stuff 
+                        Basic panel example
+              a bunch of stuff 
+                        Basic panel example
+              a bunch of stuff 
+            </div>
+        </div>
     </div>
+    
+      </div>
 
 
   </body>
