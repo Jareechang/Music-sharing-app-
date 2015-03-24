@@ -6,7 +6,6 @@
  color: black;
  letter-spacing: -1px;
  font-size:3.5em;
- margin:0;
  vertical-align: middle;
    
 }
@@ -16,10 +15,11 @@ section {
 }
 
 nav {
-  padding-top: 20px;
+  
   color:red;
 }
 
 .body-content {
-    padding-top:80px;
+  padding-top:80px;
+  overflow:hidden;
 }

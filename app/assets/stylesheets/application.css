@@ -22,11 +22,14 @@
     -text alignment to center 
     -making logo name centered 
  */
+#main-nav {
+  padding:8px;
+}
+#music-list-minus {
+  float:right;
+}
 
 @media  (min-width: 100px) and (max-width: 765px) {
-  .body-content {
-    padding-top: 300px;
-  }
   nav {
     padding-top:0;
     text-align:center;
@@ -38,11 +41,17 @@
     text-align: center;
     width: 100%;
   }
+  #main-nav {
+    padding:0;
+    width:100%;
+  }
 }
 
 #logo {
   color: black;
 }
+
+
 
 /* 
  custom side bar for the application page 

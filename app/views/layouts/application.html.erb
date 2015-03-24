@@ -10,14 +10,13 @@
       </script>
     <![endif]-->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.5.9/perfect-scrollbar.min.js"/></script
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.5.9/perfect-scrollbar.min.js"/></script>
   </head>
 
 
   <body> 
     <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-   
+      <div id="main-nav" class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" data-target="#main-navbar">
             <span class="sr-only">Toggle Navigation</span>
@@ -26,14 +25,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to "Social-Dbs", "#", id: "logo" %>
+        
+          <%= link_to "Social-Dbs", "#", id: "logo", class: "navbar-brand" %>
         </div>
         <nav>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="active"><%= link_to "Home",   '#' %></li>
-              <li><%= link_to "Help",   '#' %></li>
-              <li><%= link_to "About",   '#' %></li>
+              <li><%= link_to "Friends",   '#' %></li>
+              <li><%= link_to "Explore",   '#' %></li>
               <% if current_user %> 
                 <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
               <% else %>
@@ -46,12 +46,21 @@
     </div> 
 
     <div class="body-content">
+     
       <style> 
         #container {
           height:100px;
           width:100%;
           overflow: auto;
           border: black 2px solid;
+        }
+        .panel-body {
+          
+          height:100px;
+          overflow:hidden;
+        }
+        #music-bar{
+          margin-bottom:0px;
         }
       </style>
      <div class="row">
@@ -116,29 +125,59 @@
 
         <script>
           $(function(){
+            var $window = $(window);
             $('#container').perfectScrollbar({
               wheelSpeed:2,
               wheelPropagation:true,
               minScrollbarLength: 5
-            });        
+            });  
+            $('.panel-body').perfectScrollbar({
+              wheelSpeed:2,
+              wheelPropagation:true,
+              minScrollbarLength: 5
+            });
+            $(window).resize(function(){
+              if($window.width() < 1000 ){
+                $('#music-bar').addClass('navbar navbar-default navbar-fixed-bottom');
+              } else {
+                $('#music-bar').removeClass('navbar navbar-default navbar-fixed-bottom');
+              }
+             })
+
+
+
           })
         </script>
+
         <%= yield %>
+          <div class="container">
+            <h1> stuff </h1>
+          </div>
+           <div class="container">
+            <h1> stuff </h1>
+          </div>
+           <div class="container">
+            <h1> stuff </h1>
+          </div>
+           <div class="container">
+            <h1> stuff </h1>
+          </div>
+
         </div>
-      <div class="col-md-4">
-        <div class="panel panel-default">
-            <div class="panel-body">
-              Basic panel example
-              a bunch of stuff 
-                        Basic panel example
-              a bunch of stuff 
-                        Basic panel example
-              a bunch of stuff 
-                        Basic panel example
-              a bunch of stuff 
-                        Basic panel example
-              a bunch of stuff 
-            </div>
+      <div class="col-md-3">
+        <div id= "music-bar" class="panel panel-default">
+          <div class="panel-heading"> 
+            Music list
+             <span id="music-list-minus" class="glyphicon glyphicon-minus" data-toggle="collapse" data-target="#music-list"></span>
+          </div>
+          <ul id='music-list' class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+          </ul>
+            
         </div>
     </div>
     
