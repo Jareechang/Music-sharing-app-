@@ -22,14 +22,26 @@
     -text alignment to center 
     -making logo name centered 
  */
+
+ html, body {
+   height: 100%;
+   font-family:verdana,arial,sans-serif;
+   color:#555555;
+}
+
+.full {
+  padding-top:100px;
+}
+
 #main-nav {
   padding:8px;
 }
+
 #music-list-minus {
   float:right;
 }
 
-@media  (min-width: 100px) and (max-width: 765px) {
+@media  (min-width: 100px) and (max-width: 800px) {
   nav {
     padding-top:0;
     text-align:center;
@@ -51,7 +63,27 @@
   color: black;
 }
 
+.column {
+  height:100% !important;
+  overflow: auto !important;
+}
 
+.row {
+  height:100% !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+  overflow: hidden !important;
+}
+
+
+
+#main-nav{
+  width:inherit;
+}
+
+#sidebar {
+  margin-top:100px;
+}
 
 /* 
  custom side bar for the application page 
