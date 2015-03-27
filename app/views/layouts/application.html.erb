@@ -9,13 +9,15 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
       </script>
     <![endif]-->
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.5.9/perfect-scrollbar.min.js"/></script>
-    <meta name="viewport" content="initial-scale=1">
+
   </head>
 
 
   <body> 
+
   <div class="row row-offcanvas row-offcanvas-left">
        <!-- main left column in web page (left col) -->
        
@@ -24,7 +26,7 @@
         <div class="navbar navbar-default navbar-fixed-top">
           <div id="main-nav" class="container">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" data-target="#main-navbar">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle Navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -34,7 +36,7 @@
               <%= link_to "Social-Dbs", "#", id: "logo", class: "navbar-brand" %>
             </div>
             <nav>
-              <div class="collapse navbar-collapse navbar-right">
+              <div class="collapse navbar-right navbar-collapse" id="main-navbar">
                 <ul class="nav navbar-nav">
                   <li class="active"><%= link_to "Home",   '#' %></li>
                   <li><%= link_to "Friends",   '#' %></li>
@@ -48,7 +50,7 @@
               </div> 
             </nav>
           </div>
-        </div> 
+      </div> 
 
 
        <div class="full col-sm-12">

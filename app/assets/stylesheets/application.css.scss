@@ -16,6 +16,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 /* 
   responsive design for navbar 
     -top paddding for the nav elements increased 300 px
@@ -65,16 +66,13 @@
 
 .column {
   height:100% !important;
-  overflow: auto !important;
 }
 
 .row {
   height:100% !important;
   margin-left:0 !important;
   margin-right:0 !important;
-  overflow: hidden !important;
 }
-
 
 
 #main-nav{
