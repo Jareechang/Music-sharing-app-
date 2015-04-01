@@ -13,3 +13,20 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+$(function(){
+  // handling submits from the search form
+  $('#searchbar-submit').on('click', function(e){
+    e.preventDefault();
+    $searchtext = $('#searchbar-text').val();
+    $.getJSON('/tracks', {text: $searchtext}, function(){
+      console.log('success');
+    })
+    .done(function(json){
+      console.log(json);
+    })
+    .fail(function(jqxhr,textstatus, error){
+
+    })
+  })
+})

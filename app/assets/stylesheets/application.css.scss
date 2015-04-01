@@ -1,14 +1,4 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
  *
  *= require_tree .
  *= require_self
@@ -30,6 +20,8 @@
    color:#555555;
 }
 
+/*adding so there is no overlap with header banner */
+
 .full {
   padding-top:100px;
 }
@@ -42,23 +34,71 @@
   float:right;
 }
 
+/*gets rid of the blue outline on form focus */
+.form-control:focus {
+  border-color: #CCCCCC;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+/*song-searcharea width adjustment */
+
+#song-seachbar{
+  width: 45% !important; 
+    & .input-group {
+     width: 110% !important;
+    }
+}
+
+
+
+/******************************************************************
+Media query for small screen (mobile and pads)
+
+Adjustments summary: 
+ 1. 
+ 2. navbar-header  - fix padding and cleared space after nav 
+ 3. main-nav       - added padding, float left, 100% width and 
+ 4. .full          - added padding and width 
+ 5. song-searchbar - Making search input form full width (mobile) 
+ 
+*******************************************************************/
+
 @media  (min-width: 100px) and (max-width: 800px) {
+  /* number 1 */
   nav {
     padding-top:0;
     text-align:center;
     clear:both;
   }
+  /* number 2 */
   .navbar-header {
     float: left;
     padding: 15px;
     text-align: center;
     width: 100%;
   }
+  /* number 3 */
   #main-nav {
     padding:0;
     width:100%;
   }
+  /* number 4 */
+  .full {
+    padding-top: 176px;
+  }
+  /* number 5 */
+  #song-seachbar{
+  width: 100% !important;
+  border:none;
+  margin: 3px; 
+    & .input-group {
+     width: 100% !important;
+    }
+  }
 }
+
+/**************************************************************/
 
 #logo {
   color: black;
