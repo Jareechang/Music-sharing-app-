@@ -2,6 +2,8 @@
 <html> 
   <head>  
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.14/angular-ui-router.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.js"></script>
     <%= stylesheet_link_tag 'application', media: 'all',
                                            'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -15,7 +17,7 @@
   </head>
 
 
-  <body> 
+  <body ng-app="flapperNews" ng-controller="MainCtrl"> 
 
   <div class="row row-offcanvas row-offcanvas-left">
        <!-- main left column in web page (left col) -->
@@ -67,7 +69,7 @@
         <div class="clearing-both"></div>
          <div class="row">
             <div class="col-sm-12">
-             <div ng-app="flapperNews" ng-controller="MainCtrl">
+             <div>
                 <div ng-include="'test.html'"></div>
              </div>
               <%= yield %>
