@@ -11,6 +11,13 @@
 // about supported directives.
 //= require jquery
 //= require jquery_ujs
+
+// requiring angular rails templates
+//= require angular-rails-templates
+
+// Templates in app/assets/javascripts/angular/templates
+//= require_tree ./angular/templates
+
 //= require bootstrap
 //= require_tree .
 
