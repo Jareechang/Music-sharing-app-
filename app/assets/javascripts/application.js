@@ -21,6 +21,8 @@
 //= require bootstrap
 //= require_tree .
 
+
+// 
 $(function(){
   // handling submits from the search form
   $('#searchbar-submit').on('click', function(e){

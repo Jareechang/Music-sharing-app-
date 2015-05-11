@@ -4,7 +4,7 @@ angular.module('flapperNews', ['templates', 'ngResource'])
 // ************* Start of factory ***********************
 
 .factory('Tracks', ['$resource', function ($resource) {
-    return $resource('/tracks', {}, {
+    return $resource('/tracks', {text: 'lanadelrey'}, {
         query: { method: 'GET', isArray: true }
     })
 }])
@@ -18,7 +18,7 @@ angular.module('flapperNews', ['templates', 'ngResource'])
 '$scope', 'Tracks',
 function($scope, Tracks){
   $scope.test = 'Hello world!';
-  $scope.tracks = Tracks.query();
+  console.log(Tracks.query());
 }]);
 
 // ************* end of main controller ***************
