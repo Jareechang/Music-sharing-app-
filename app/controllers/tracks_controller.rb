@@ -9,9 +9,11 @@ class TracksController < ApplicationController
     @tracks.map! do |obj| 
       # Sends request to soundcloud API to gather all the Oembed info 
       # and gathers only the html widget for embedding into website 
-      client.get('/oembed', :url => obj[:permalink_url])[:html]
+      oembed = client.get('/oembed', :url => obj[:permalink_url])[:html].split(' ')
+      oembed[1]  = "width=\"30%\""
+      oembed[2]  = "width=\"100\""
+      oembed.join(' ')
     end 
-
     # Respond in JSON format 
     render json: @tracks
   end
