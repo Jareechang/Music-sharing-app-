@@ -5,6 +5,14 @@ class TracksController < ApplicationController
 
     # find all sounds of buskers licensed under 'creative commons share alike'
     @tracks = client.get('/tracks', :q => params[:text], :limit => 20)
+    
+
+    @tracks.map! do |obj| 
+      # Sends request to soundcloud API to gather all the Oembed info 
+      # and gathers only the html widget for embedding into website 
+      client.get('/oembed', :url => obj[:permalink_url])[:html]
+    end 
+
     render json: @tracks
   end
 end
