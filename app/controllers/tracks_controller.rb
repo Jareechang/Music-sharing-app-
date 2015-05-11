@@ -12,6 +12,7 @@ class TracksController < ApplicationController
       client.get('/oembed', :url => obj[:permalink_url])[:html]
     end 
 
+    # Respond in JSON format 
     render json: @tracks
   end
 end
