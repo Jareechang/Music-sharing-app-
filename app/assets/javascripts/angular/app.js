@@ -20,11 +20,12 @@ function($scope, Tracks){
   // grabs the element to append to 
   var targetElement = angular.element(document.querySelector('#testing'));
   // Use the Angular factory to get the tracks from the back-end
-  Tracks.query().$promise.then(function(data){
-    for(var i in data){
-      targetElement.append(data[i]);
-    } 
-  })
+
+  // Tracks.query().$promise.then(function(data){
+  //   for(var i in data){
+  //     targetElement.append(data[i]);
+  //   } 
+  // })
 
 }]);
 
