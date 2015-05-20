@@ -3,9 +3,9 @@ class TracksController < ApplicationController
     # create a client object with your app credentials
     client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
 
-    # find all sounds of buskers licensed under 'creative commons share alike'
-    @tracks = client.get('/tracks', :q => params[:text], :limit => 20)
-    
+    find all sounds of buskers licensed under 'creative commons share alike'
+    @tracks = client.get('/tracks', :q => params[:text], :limit => 20) 
+
     @tracks.map! do |obj| 
       # Sends request to soundcloud API to gather all the Oembed info 
       # and gathers only the html widget for embedding into website 
@@ -14,6 +14,7 @@ class TracksController < ApplicationController
       oembed[2]  = "width=\"100\""
       oembed.join(' ')
     end 
+
     # Respond in JSON format 
     render json: @tracks
   end
