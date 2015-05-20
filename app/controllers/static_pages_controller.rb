@@ -10,7 +10,7 @@ class StaticPagesController < ApplicationController
 
   def facebook_friends(token)
     gab_id = '10153487298377454'
-    Koala.config.api_version = "v2.3"
+    Koala.config.api_version = "v2.0"
     @graph = Koala::Facebook::API.new(token , ENV['FACEBOOK_SECRET'])
     friends = @graph.get_connections("me", "friends")
     friends
