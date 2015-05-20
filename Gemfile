@@ -11,7 +11,10 @@ gem 'turbolinks',           '2.3.0'
 gem 'jbuilder',             '2.2.3'
 gem 'sdoc',                 '0.4.0', group: :doc
 gem 'soundcloud'
+# Easier front-end templating with angular 
 gem 'angular-rails-templates'
+# Koala gem for Facebook Graph API calls 
+gem "koala", "~> 2.0"
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
